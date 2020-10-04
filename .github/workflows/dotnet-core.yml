@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: alpine-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore ./PerformativeDotNet
+      run: dotnet restore ./PerformativeDotNet/
     - name: Build
       run: dotnet build --configuration Release --no-restore ./PerformativeDotNet
     - name: Test
