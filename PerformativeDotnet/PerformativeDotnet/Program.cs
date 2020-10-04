@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BenchmarkDotNet.Running;
+using System;
 
 namespace PerformativeDotnet
 {
@@ -6,7 +7,7 @@ namespace PerformativeDotnet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BenchmarkRunner.Run<DateParserBenchmark>();
         }
     }
 }
