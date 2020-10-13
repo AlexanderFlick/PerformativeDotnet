@@ -26,5 +26,23 @@ namespace PerformativeDotnet
         {
             Parser.GetYearFromSplit(DateTime);
         }
+
+        [Benchmark]
+        public void GetYearFromSubstring()
+        {
+            Parser.GetYearFromSubstring(DateTime);
+        }
+
+        [Benchmark]
+        public void GetYearFromSpan()
+        {
+            Parser.GetYearFromSpan(DateTime);
+        }
+
+        [Benchmark]
+        public void GetYearFromSpanWithManualConversion()
+        {
+            Parser.GetYearFromSpanWithManualConversion(DateTime);
+        }
     }
 }
