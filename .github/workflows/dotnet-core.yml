@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore ./PerformativeDotnet
+      run: dotnet restore ./PerformativeDotnet/
     - name: Build
-      run: dotnet build --configuration Release --no-restore ./PerformativeDotnet/PerformativeDotnet
+      run: dotnet build --configuration Release --no-restore ./PerformativeDotnet
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal ./PerformativeDotnet
