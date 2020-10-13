@@ -20,6 +20,6 @@ jobs:
     - name: Install dependencies
       run: dotnet restore ./PerformativeDotnet
     - name: Build
-      run: dotnet build --configuration Release --no-restore ./PerformativeDotnet
+      run: dotnet build --configuration Release --no-restore ./PerformativeDotnet/PerformativeDotnet
     - name: Test
       run: dotnet test --no-restore --verbosity normal
